@@ -3,7 +3,7 @@ import java.util.Scanner;
 class ak{ 
 
 
-static int distinctChars(String s) 
+static int distinct(String s) 
 { 
 	int freq[] = new int[26]; 
 	int count = 0; 
@@ -19,7 +19,7 @@ static int distinctChars(String s)
 	return count; 
 } 
 
-static int waysToSplit(String s) 
+static int SplitS(String s) 
 { 
 	int n = s.length(); 
 	int answer = 0; 
@@ -31,8 +31,8 @@ static int waysToSplit(String s)
 		String right = s.substring(i, n); 
 
 		
-		if (distinctChars(left) == 
-			distinctChars(right)) 
+		if (distinct(left) == 
+			distinct(right)) 
 			answer++; 
 	} 
 	return answer; 
@@ -45,7 +45,7 @@ public static void main(String[] args)
 	s=in.next(); 
 
 
-	System.out.print(waysToSplit(s)); 
+	System.out.print(SplitS(s)); 
 } 
 } 
 
